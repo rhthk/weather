@@ -1,6 +1,6 @@
 {
-  "short_name": "Weather",
-  "name": "Weather App",
+  "short_name": "React App",
+  "name": "Weather app",
   "icons": [
     {
       "src": "favicon.ico",
