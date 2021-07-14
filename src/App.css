@@ -1,11 +1,31 @@
-.app{
-    height: 100vh;
+.app {
+  height: 100vh;
 }
 :root {
-    --nav-height: 60px;
-    --color-primary: hsl(0, 0%, 60%);
-    --color-primary-lite: hsl(0, 0%, 80%);
-    --color-title:hsl(0, 0%, 30%);
-    --color-subtitle:hsl(0, 0%, 30%);
-    font-size: 16px;
-  }
+  --nav-height: 60px;
+  --color-primary: hsl(0, 0%, 60%);
+  --color-primary-lite: hsl(0, 0%, 80%);
+  --color-title: hsl(0, 0%, 30%);
+  --color-subtitle: hsl(0, 0%, 30%);
+  font-size: 16px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+.box{
+    height: 60vh;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+.time {
+  padding: 0.5em 1em;
+  transition: 300ms;
+}
+.time:hover {
+  background-color: rgb(198, 169, 224);
+}
+.selected {
+  background-color: blueviolet;
+}

@@ -1,9 +1,11 @@
 .weather{
-    height: min(250px,30%);
+    height: max(250px,30vh);
     margin: 0;
     padding: 0;
     background-color:var(--color-primary);
     display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -11,12 +13,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-.center{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 .temperature{

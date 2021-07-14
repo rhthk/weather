@@ -1,20 +1,21 @@
 import "./weather_card.css";
 import React from "react";
-import { ReactComponent as Right } from "../../icons/Chevron_right.svg";
-import { ReactComponent as Left } from "../../icons/Chevron_left.svg";
+import useGetCurrent from "../../hooks/useGetCurrent";
 
-
-export default function Weather() {
+export default  function Weather({ location }) {
+  const { loading, error, data } = useGetCurrent(location);
+  if (loading) return <div className="weather">loading...</div>;
+  if (error) return <div className="weather">Error</div>;
   return (
     <div className="weather">
-      <div className="center">
-        <Left style={{width:30}}/>
-        <div className="container">
-          <p className="temperature">25</p>
-          <p className="status">Light</p>
-          <div className="subtitle">AOI</div>
-        </div>
-        <Right style={{width:30}}/>
+      <div className="container">
+        <p className="temperature">
+          {data?.current?.temp_c}
+          <span>&#8451;</span>
+        </p>
+        <p className="status">{data?.current.condition.text}</p>
+        <p className="status">{data?.location?.name+", "+data?.location?.country}</p>
+        <div className="subtitle">{data?.current?.wind_kph}km/h</div>
       </div>
     </div>
   );

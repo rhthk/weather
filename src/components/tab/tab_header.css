@@ -20,13 +20,24 @@
 .tab-body {
   background-color: lightblue;
   height: calc(100% - 60px - 30% - 40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weather-now {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .weather-details {
-    height: 150px;
+  height: 150px;
   padding: 1rem;
   border: 1px solid grey;
   border-radius: 25px;
   text-align: center;
+  flex-grow: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
