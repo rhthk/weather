@@ -34,6 +34,7 @@
 .weather-details {
   height: 150px;
   padding: 1rem;
+  margin: 1rem;
   border: 1px solid grey;
   border-radius: 25px;
   text-align: center;
